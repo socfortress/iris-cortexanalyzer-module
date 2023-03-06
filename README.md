@@ -35,6 +35,8 @@
 # Intro
 Use the `Cortex Analyzer` module to run Cortex Analyzers via the DFIR-IRIS platform. </br>
 
+> Get started with Cortex: [Video Tutorial](https://youtu.be/SdP-FFjZasI)
+
 The module is built for the below IoC types:
 * Ip Address
 * Domain
