@@ -67,7 +67,7 @@ class IrisCortexanalyzerInterface(IrisModuleInterface):
 
         if module_conf.get('cortexanalyzer_manual_hook_enabled'):
             status = self.register_to_hook(module_id, iris_hook_name='on_manual_trigger_ioc',
-                                           manual_hook_name='Get cortexanalyzer insight')
+                                           manual_hook_name='Run Cortex Analyzer')
             if status.is_failure():
                 self.log.error(status.get_message())
                 self.log.error(status.get_data())
@@ -124,9 +124,17 @@ class IrisCortexanalyzerInterface(IrisModuleInterface):
 
         for element in data:
             # Check that the IOC we receive is of type the module can handle and dispatch
-            if 'domain' in element.ioc_type.type_name:
+            if "domain" in element.ioc_type.type_name:
                 status = cortexanalyzer_handler.handle_domain(ioc=element)
                 in_status = InterfaceStatus.merge_status(in_status, status)
+
+            elif "ip-" in element.ioc_type.type_name:
+                status = cortexanalyzer_handler.handle_ip(ioc=element)
+                in_status = InterfaceStatus.merge_status(in_status, status)
+
+            elif element.ioc_type.type_name in ['md5', 'sha224', 'sha256', 'sha512']:
+               status = cortexanalyzer_handler.handle_hash(ioc=element)
+               in_status = InterfaceStatus.merge_status(in_status, status)
 
             #elif element.ioc_type.type_name in ['md5', 'sha224', 'sha256', 'sha512']:
             #    status = cortexanalyzer_handler.handle_hash(ioc=element)

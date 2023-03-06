@@ -81,8 +81,8 @@ module_configuration = [
     },# TODO: careful here, remove backslashes from \{\{ results| tojson(indent=4) \}\}
     {
         "param_name": "cortexanalyzer_domain_report_template",
-        "param_human_name": "Domain report template",
-        "param_description": "Domain report template used to add a new custom attribute to the target IOC",
+        "param_human_name": "Cortex Analyzer report template",
+        "param_description": "Cortex Analyzer template used to add a new custom attribute to the target IOC",
         "default": "<div class=\"row\">\n    <div class=\"col-12\">\n        <div "
                    "class=\"accordion\">\n            <h3>cortexanalyzer raw results</h3>\n\n           "
                    " <div class=\"card\">\n                <div class=\"card-header "
