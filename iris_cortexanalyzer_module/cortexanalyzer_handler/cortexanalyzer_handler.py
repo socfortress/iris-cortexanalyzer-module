@@ -170,7 +170,7 @@ class CortexanalyzerHandler(object):
                 html_template=self.mod_config.get(
                     "cortexanalyzer_domain_report_template"
                 ),
-                cortexanalyze_report=final_report,
+                cortexanalyzer_report=final_report,
         
             )
 
@@ -292,7 +292,7 @@ class CortexanalyzerHandler(object):
                 html_template=self.mod_config.get(
                     "cortexanalyzer_domain_report_template"
                 ),
-                cortexanalyze_report=final_report,
+                cortexanalyzer_report=final_report,
         
             )
 
@@ -414,7 +414,7 @@ class CortexanalyzerHandler(object):
                 html_template=self.mod_config.get(
                     "cortexanalyzer_domain_report_template"
                 ),
-                cortexanalyze_report=final_report,
+                cortexanalyzer_report=final_report,
         
             )
 
