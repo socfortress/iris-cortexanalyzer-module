@@ -83,33 +83,7 @@ module_configuration = [
         "param_name": "cortexanalyzer_domain_report_template",
         "param_human_name": "Cortex Analyzer report template",
         "param_description": "Cortex Analyzer template used to add a new custom attribute to the target IOC",
-        "default": "<div class=\"row\">\n    <div class=\"col-12\">\n        <div "
-                   "class=\"accordion\">\n            <h3>cortexanalyzer raw results</h3>\n\n           "
-                   " <div class=\"card\">\n                <div class=\"card-header "
-                   "collapsed\" id=\"drop_r_cortexanalyzer\" data-toggle=\"collapse\" "
-                   "data-target=\"#drop_raw_cortexanalyzer\" aria-expanded=\"false\" "
-                   "aria-controls=\"drop_raw_cortexanalyzer\" role=\"button\">\n                    <div "
-                   "class=\"span-icon\">\n                        <div "
-                   "class=\"flaticon-file\"></div>\n                    </div>\n              "
-                   "      <div class=\"span-title\">\n                        cortexanalyzer raw "
-                   "results\n                    </div>\n                    <div "
-                   "class=\"span-mode\"></div>\n                </div>\n                <div "
-                   "id=\"drop_raw_cortexanalyzer\" class=\"collapse\" aria-labelledby=\"drop_r_cortexanalyzer\" "
-                   "style=\"\">\n                    <div class=\"card-body\">\n              "
-                   "          <div id='cortexanalyzer_raw_ace'>\{\{ results| tojson(indent=4) \}\}</div>\n  "
-                   "                  </div>\n                </div>\n            </div>\n    "
-                   "    </div>\n    </div>\n</div> \n<script>\nvar cortexanalyzer_in_raw = ace.edit("
-                   "\"cortexanalyzer_raw_ace\",\n{\n    autoScrollEditorIntoView: true,\n    minLines: "
-                   "30,\n});\ncortexanalyzer_in_raw.setReadOnly(true);\ncortexanalyzer_in_raw.setTheme("
-                   "\"ace/theme/tomorrow\");\ncortexanalyzer_in_raw.session.setMode("
-                   "\"ace/mode/json\");\ncortexanalyzer_in_raw.renderer.setShowGutter("
-                   "true);\ncortexanalyzer_in_raw.setOption(\"showLineNumbers\", "
-                   "true);\ncortexanalyzer_in_raw.setOption(\"showPrintMargin\", "
-                   "false);\ncortexanalyzer_in_raw.setOption(\"displayIndentGuides\", "
-                   "true);\ncortexanalyzer_in_raw.setOption(\"maxLines\", "
-                   "\"Infinity\");\ncortexanalyzer_in_raw.session.setUseWrapMode("
-                   "true);\ncortexanalyzer_in_raw.setOption(\"indentedSoftWrap\", "
-                   "true);\ncortexanalyzer_in_raw.renderer.setScrollMargin(8, 5);\n</script> ",
+        "default": "<div class=\"row\">\n    <div class=\"col-12\">\n        <div class=\"accordion\">\n            <h2 class=\"text-center\"><a href=\"https://www.socfortress.co/contact_form.html\">SOCFortress Professional Services</a></h2>\n            <h3>Cortex Analyzer raw results</h3>\n\n            <div class=\"card\">\n                <div class=\"card-header collapsed\" id=\"drop_r_cortexanalyzer\" data-toggle=\"collapse\" data-target=\"#drop_raw_cortexanalyzer\" aria-expanded=\"false\" aria-controls=\"drop_raw_cortexanalyzer\" role=\"button\">\n                    <div class=\"span-icon\">\n                        <div class=\"flaticon-file\"></div>\n                    </div>\n                    <div class=\"span-title\">\n                        Cortex Analyzer results\n                    </div>\n                    <div class=\"span-mode\"></div>\n                </div>\n                <div id=\"drop_raw_cortexanalyzer\" class=\"collapse\" aria-labelledby=\"drop_r_cortexanalyzer\" style=\"\">\n                    <div class=\"card-body\">\n                        <div id='cortexanalyzer_raw_ace'>{{ results| tojson(indent=4) }}</div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div> \n<script>\nvar cortexanalyzer_in_raw = ace.edit(\"cortexanalyzer_raw_ace\",\n{\n    autoScrollEditorIntoView: true,\n    minLines: 30,\n});\ncortexanalyzer_in_raw.setReadOnly(true);\ncortexanalyzer_in_raw.setTheme(\"ace/theme/tomorrow\");\ncortexanalyzer_in_raw.session.setMode(\"ace/mode/json\");\ncortexanalyzer_in_raw.renderer.setShowGutter(true);\ncortexanalyzer_in_raw.setOption(\"showLineNumbers\", true);\ncortexanalyzer_in_raw.setOption(\"showPrintMargin\", false);\ncortexanalyzer_in_raw.setOption(\"displayIndentGuides\", true);\ncortexanalyzer_in_raw.setOption(\"maxLines\", \"Infinity\");\ncortexanalyzer_in_raw.session.setUseWrapMode(true);\ncortexanalyzer_in_raw.setOption(\"indentedSoftWrap\", true);\ncortexanalyzer_in_raw.renderer.setScrollMargin(8, 5);\n</script> ",
         "mandatory": False,
         "type": "textfield_html",
         "section": "Templates"
