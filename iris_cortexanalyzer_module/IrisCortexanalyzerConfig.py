@@ -8,8 +8,8 @@
 #
 #  License MIT
 
-module_name = "IrisCortexanalyzer"
-module_description = ""
+module_name = "Cortex Analyzer"
+module_description = "Integrate with Cortex and run any Analyzer. Anaylzer must be enabled within Cortex."
 interface_version = 1.1
 module_version = 1.0
 
@@ -19,22 +19,29 @@ pipeline_info = {}
 
 module_configuration = [
     {
-        "param_name": "cortexanalyzer_url",
-        "param_human_name": "cortexanalyzer URL",
-        "param_description": "",
+        "param_name": "cortexanalyze_url",
+        "param_human_name": "Cortex URL",
+        "param_description": "Cortex URL",
         "default": None,
         "mandatory": True,
-        "type": "string"
+        "type": "string",
     },
     {
-        "param_name": "cortexanalyzer_key",
-        "param_human_name": "cortexanalyzer key",
-        "param_description": "cortexanalyzer API key",
+        "param_name": "cortexanalyze_key",
+        "param_human_name": "Cortex API Key",
+        "param_description": "Cortex API key",
         "default": None,
         "mandatory": True,
-        "type": "sensitive_string"
+        "type": "sensitive_string",
     },
-    
+    {
+        "param_name": "cortexanalyze_analyzer",
+        "param_human_name": "Cortex Analyzer",
+        "param_description": "Cortex Analyzer to run - I.E VirusTotal_GetReport_3_0",
+        "default": "VirusTotal_GetReport_3_0",
+        "mandatory": True,
+        "type": "string",
+    },    
     {
         "param_name": "cortexanalyzer_manual_hook_enabled",
         "param_human_name": "Manual triggers on IOCs",
