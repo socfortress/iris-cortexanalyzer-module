@@ -27,7 +27,7 @@ Run()
         exit
     }
 
-    python3.9 setup.py bdist_wheel
+    docker run --rm -it -v "$(pwd):/setup" -w /setup python:3.9 python3.9 setup.py bdist_wheel
 
     latest=$(get_recent_file)
     module=${latest#"./dist/"}
